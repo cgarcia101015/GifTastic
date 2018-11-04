@@ -1,0 +1,22 @@
+.animal-btn {
+    background-color: #45a395;
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    display: inline-flex;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+    font-size: 17px;
+}
+
+.animal-view {
+    
+    display: inline-block;
+}
+
+.body {
+    background-color: whitesmoke;
+}
