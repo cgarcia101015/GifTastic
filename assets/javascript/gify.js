@@ -9,6 +9,7 @@ function displayGifInfo() {
     var animalGif = $(this).attr("data-name");
     // var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=A7effRemThrAFqB2MaRYC1ZHpQFjD18i&rating=g&limit=10&tag=" + animalGif;
     var queryURL = "https:api.giphy.com/v1/gifs/search?q=" + animalGif + "&api_key=A7effRemThrAFqB2MaRYC1ZHpQFjD18i";
+    var queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=doug+demuro&type=video&key=AIzaSyBZLu912adN71vk6dczqV0RRWqswuC97j4"
     // var queryURL = "https:api.giphy.com/v1/gifs/search?q=" + animal + "api_key=A7effRemThrAFqB2MaRYC1ZHpQFjD18i&limit=10";
  
 
