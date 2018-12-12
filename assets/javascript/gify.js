@@ -9,7 +9,6 @@ function displayGifInfo() {
     var animalGif = $(this).attr("data-name");
     // var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=A7effRemThrAFqB2MaRYC1ZHpQFjD18i&rating=g&limit=10&tag=" + animalGif;
     var queryURL = "https:api.giphy.com/v1/gifs/search?q=" + animalGif + "&api_key=A7effRemThrAFqB2MaRYC1ZHpQFjD18i";
-    var queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=doug+demuro&type=video&key=AIzaSyBZLu912adN71vk6dczqV0RRWqswuC97j4"
     // var queryURL = "https:api.giphy.com/v1/gifs/search?q=" + animal + "api_key=A7effRemThrAFqB2MaRYC1ZHpQFjD18i&limit=10";
  
 
@@ -80,19 +79,7 @@ $("#add-animal").on("click", function (event) {
     console.log(newAnimal);
     renderButtons();
 });
-/*
-$(".gif").on("click", function () {
-    var state = $(this).attr("data-state");
-    console.log(state);
-    if (state === "still") {
-        $(this).attr("src", $(this).attr("data-animate"));
-        $(this).attr("data-state", "animate");
-    } else {
-        $(this).attr("src", $(this).attr("data-still"));
-        $(this).attr("data-state", "still");
-    }
- });
- */
+
 
 $(document).on("click", ".animal-btn", displayGifInfo);
 
@@ -109,122 +96,4 @@ $(document).on('click', ".gif", function() {
         $(this).attr("data-state", "still");
     }
 });
-
-// $(".gif").on("click", function() {
-//     console.log(this);
-//     var state = $(this).attr("data-state");
-  
-//     if (state === "still") {
-//       $(this).attr("src", $(this).attr("data-animate"));
-//       $(this).attr("data-state", "animate");
-//     } else {
-//       $(this).attr("src", $(this).attr("data-still"));
-//       $(this).attr("data-state", "still");
-//     }
-//   });
-
-
-
-//  $(document).ready(function() {
-//     for (i = 0; i<= animalButtons.length; i++) {
-//         var r = $('<input type="button" value="new button" />');
-//         $("#button").append(animalButtons[i]);
-
-//      };
-// });
-
-
-
-
-
-
-
-
-
-// var animal = ["dog", "cat", "rabbit", "hamster", "skunk", "goldfish", "bird", "ferret",
-// "turtle", "sugar glider", "chinchilla", "hedgehog", "hermit crab", "gerbal",
-// "pygmy goat", "chicken", "capybara", "teacup pig", "serval", "salamander", "frog"];
-
-
-
-
-// function displayGifInfo() {
-    
-//     var animal = $(this).attr("data-name");
-//     //https:api.giphy.com/v1/gifs/search?q=
-
-//     var queryURL = "https:api.giphy.com/v1/gifs/search?q=" + animal + "api_key=A7effRemThrAFqB2MaRYC1ZHpQFjD18i&limit=10";
-
-// $.ajax({
-//     url: queryURL,
-//     method: "GET"
-// }).then(function(response){
-// console.log('response', response);
-//     var gifDiv = $("<div class='animal'></div>" );
-
-//     var rating = response.Rated;
-
-//     var pOne = $("<p></p>").text("Rating: " + rating);
-
-//     gifDiv.append(pOne);
-
-//     var imageUrl = response.data.image_original_url;
-
-//     var animalImage = $("<img>").attr("src", imgageURL);
-
-//     // animalImage.attr("src", imageUrl);
-
-//     animalImage.attr("alt", "animal image");
-
-    
-//     $("#animal-view").prepend(animalImage);
-
-//     });
-// };
-
-
-// function renderButtons () {
-// // $("#buttons-view").empty();
-
-// for (var i = 0; i < animal.length; i++) {
-    
-//     var a = $("<button>");
-    
-//     a.addClass("animal-btn");
-    
-//     a.attr("data-name", animal[i]);
-    
-//     a.text(animal[i]);
-//     var buttonContainer = $("buttons-view")
-//     // buttonContainer.attr("data-test", "testing")
-//     // $("#buttons-view").append(a);
-//     // console.log(animal[i]);
-//     };
-// };
-
-// $("#add-animal").on("click", function (event) {
-//     event.preventDefault();
-//     // This line grabs the input from the textbox
-//     var animal = $("#animal-input").val().trim();
-
-//     gif.push(animal);
-
-//     renderButtons();
-// });
-
-
-// $(document).on("click", ".animal-btn", displayGifInfo);
-
-// renderButtons();
-
-
-    
-// //  $(document).ready(function() {
-// //     for (i = 0; i<= animalButtons.length; i++) {
-// //         var r = $('<input type="button" value="new button" />');
-// //         $("#button").append(animalButtons[i]);
-            
-// //      };
-// // });
-    
 
