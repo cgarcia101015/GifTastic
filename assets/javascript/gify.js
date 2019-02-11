@@ -35,8 +35,8 @@ $(document).ready(function() {
 	// 	}).done(function(response) {
 
 	function Giftastic() {
-		var dog = $(this).attr('data-name');
-		console.log(dog);
+		var animalGif = $(this).attr('data-name');
+		console.log(animalGif);
 		var queryurl =
 			'https://api.giphy.com/v1/gifs/search?q=' +
 			animalGif +
