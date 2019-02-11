@@ -25,13 +25,14 @@ $(document).ready(function() {
 
 	function displayGifInfo() {
 		var animalGif = $(this).attr('data-name');
+		console.log(animalGif);
 		var queryURL =
 			'https:api.giphy.com/v1/gifs/search?q=' + animalGif + '&api_key=A7effRemThrAFqB2MaRYC1ZHpQFjD18i';
-
+		console.log('Query URL: ' + queryURL);
 		$.ajax({
 			url: queryURL,
 			method: 'GET'
-		}).then(function(response) {
+		}).done(function(response) {
 			console.log('response', response);
 			console.log(queryURL);
 			var gifDiv = $("<div class='animal'></div>");
