@@ -47,7 +47,7 @@ $(document).ready(function() {
 			method: 'GET'
 		}).done(function(response) {
 			var results = response.data;
-			console.log(reuslts);
+			console.log(response);
 			console.log(queryurl);
 			var gifDiv = $("<div class='animal'></div>");
 
