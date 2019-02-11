@@ -26,11 +26,11 @@ $(document).ready(function() {
 	function displayGifInfo() {
 		var animalGif = $(this).attr('data-name');
 		console.log(animalGif);
-		var queryURL =
-			'https:api.giphy.com/v1/gifs/search?q=' + animalGif + '&api_key=A7effRemThrAFqB2MaRYC1ZHpQFjD18i';
-		console.log('Query URL: ' + queryURL);
+		var queryurl =
+			'https:api.giphy.com/v1/gifs/search?q=' + animalGif + '&api_key=A7effRemThrAFqB2MaRYC1ZHpQFjD18i&limit=10';
+		console.log('Query URL: ' + queryurl);
 		$.ajax({
-			url: queryURL,
+			url: queryurl,
 			method: 'GET'
 		}).done(function(response) {
 			console.log('response', response);
@@ -38,7 +38,7 @@ $(document).ready(function() {
 			var gifDiv = $("<div class='animal'></div>");
 
 			var results = response.data;
-			for (var i = 0; i < 10; i++) {
+			for (var i = 0; i < results.length; i++) {
 				var pOne = $('<div>').html('Rating: ' + results[i].rating);
 
 				gifDiv.append(pOne);
