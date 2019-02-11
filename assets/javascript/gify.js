@@ -23,11 +23,24 @@ $(document).ready(function() {
 		'frog'
 	];
 
-	function displayGifInfo() {
-		var animalGif = $(this).attr('data-name');
-		console.log(animalGif);
+	// function displayGifInfo() {
+	// 	var animalGif = $(this).attr('data-name');
+	// 	console.log(animalGif);
+	// 	var queryurl =
+	// 		'https:api.giphy.com/v1/gifs/search?q=' + animalGif + '&api_key=A7effRemThrAFqB2MaRYC1ZHpQFjD18i&limit=10';
+	// 	console.log('Query URL: ' + queryurl);
+	// 	$.ajax({
+	// 		url: queryurl,
+	// 		method: 'GET'
+	// 	}).done(function(response) {
+
+	function Giftastic() {
+		var dog = $(this).attr('data-name');
+		console.log(dog);
 		var queryurl =
-			'https:api.giphy.com/v1/gifs/search?q=' + animalGif + '&api_key=A7effRemThrAFqB2MaRYC1ZHpQFjD18i&limit=10';
+			'https://api.giphy.com/v1/gifs/search?q=' +
+			animalGif +
+			'&api_key=A7effRemThrAFqB2MaRYC1ZHpQFjD18i&limit=10';
 		console.log('Query URL: ' + queryurl);
 		$.ajax({
 			url: queryurl,
@@ -91,7 +104,7 @@ $(document).ready(function() {
 		renderButtons();
 	});
 
-	$(document).on('click', '.animal-btn', displayGifInfo);
+	$(document).on('click', '.animal-btn', Giftastic);
 
 	//Got the pausing gifs to work
 
