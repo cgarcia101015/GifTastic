@@ -46,11 +46,11 @@ $(document).ready(function() {
 			url: queryurl,
 			method: 'GET'
 		}).done(function(response) {
-			console.log('response', response);
+			var results = response.data;
+			console.log(reuslts);
 			console.log(queryurl);
 			var gifDiv = $("<div class='animal'></div>");
 
-			var results = response.data;
 			for (var i = 0; i < results.length; i++) {
 				var pOne = $('<div>').html('Rating: ' + results[i].rating);
 
