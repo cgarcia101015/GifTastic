@@ -24,9 +24,7 @@ var animal = [
 
 function displayGifInfo() {
 	var animalGif = $(this).attr('data-name');
-	// var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=A7effRemThrAFqB2MaRYC1ZHpQFjD18i&rating=g&limit=10&tag=" + animalGif;
 	var queryURL = 'https:api.giphy.com/v1/gifs/search?q=' + animalGif + '&api_key=A7effRemThrAFqB2MaRYC1ZHpQFjD18i';
-	// var queryURL = "https:api.giphy.com/v1/gifs/search?q=" + animal + "api_key=A7effRemThrAFqB2MaRYC1ZHpQFjD18i&limit=10";
 
 	$.ajax({
 		url: queryURL,
@@ -79,6 +77,8 @@ function renderButtons() {
 	}
 }
 
+renderButtons();
+
 $('#add-animal').on('click', function(event) {
 	event.preventDefault();
 	// This line grabs the input from the textbox
@@ -91,7 +91,6 @@ $('#add-animal').on('click', function(event) {
 
 $(document).on('click', '.animal-btn', displayGifInfo);
 
-renderButtons();
 //Got the pausing gifs to work
 
 $(document).on('click', '.gif', function() {
